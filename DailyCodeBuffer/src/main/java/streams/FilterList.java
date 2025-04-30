@@ -1,4 +1,5 @@
 package streams;
+//Write a program to Filter even number from a list
 
 import java.util.List;
 import java.util.stream.Collectors;
