@@ -44,3 +44,42 @@ public class Day2_MoveAllZeroesToEnd {
         System.out.println(Arrays.toString(arr));
     }
 }
+
+/*
+Environment TIP:
+
+The platform expects non-static method inside a class named Solution.
+
+The non-static method should have the return value for what you're required to return to solve the question.
+
+You are not required to call this non-static method inside a main method. You dont need to create the main method, the code will work fine without it
+
+The above code will work on your IDE but not on GFG enviroment. The code that will work on the GFG eenvironment:
+
+import java.util.Arrays;
+
+class Solution {
+    public int[] moveZerosToEnd(int[] arr) {
+        int n = arr.length;
+        int index = 0; // Tracks where non-zero elements should be placed
+
+        // Step 1: Move non-zero elements forward
+        for (int i = 0; i < n; i++) {
+            if (arr[i] != 0) {
+                arr[index++] = arr[i]; // Shift non-zero numbers forward
+            }
+        }
+
+        // Step 2: Fill remaining positions with zeros
+        while (index < n) {
+            arr[index++] = 0;
+        }
+
+        return arr; // Return the modified array
+    }
+}
+
+ */
+
+
+
