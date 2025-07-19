@@ -52,9 +52,9 @@ The platform expects non-static method inside a class named Solution.
 
 The non-static method should have the return value for what you're required to return to solve the question.
 
-You are not required to call this non-static method inside a main method. You dont need to create the main method, the code will work fine without it
+You are not required to call this non-static method inside a main method. You don't need to create the main method, the code will work fine without it
 
-The above code will work on your IDE but not on GFG enviroment. The code that will work on the GFG eenvironment:
+The above code will work on your IDE but not on GFG environment. The code that will work on the GFG eenvironment:
 
 import java.util.Arrays;
 
