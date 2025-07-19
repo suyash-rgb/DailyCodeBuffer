@@ -1,0 +1,31 @@
+# Ignore compiled class files
+*.class
+
+# Package files
+*.jar
+*.war
+*.ear
+
+# Eclipse project files
+*.classpath
+*.project
+.settings/
+
+# IntelliJ project files
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# Maven target directory
+target/
+
+# Gradle build directory
+build/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
