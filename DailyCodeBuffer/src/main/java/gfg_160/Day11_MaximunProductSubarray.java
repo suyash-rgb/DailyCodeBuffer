@@ -26,7 +26,7 @@ public class Day11_MaximunProductSubarray {
 
     public static void main(String[] args) {
 
-        int[] nums = {-1, -3, -10, 0, 60};
+        int[] nums = {-2, 6, -3, -10, 0, 2};
         int result= maxProduct(nums);
         System.out.println(result);
     }
