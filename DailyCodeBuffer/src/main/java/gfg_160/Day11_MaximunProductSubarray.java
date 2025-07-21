@@ -55,35 +55,32 @@ public class Day11_MaximunProductSubarray {
 
     class Solution {
     int maxProduct(int[] arr) {
-        // code here
+
         int n = arr.length;
+        int maxProd = Integer.MIN_VALUE;
 
-        int MAXI = 1;
-        int MINI=1;
+        // leftToRight to store product from left to Right
+        int leftToRight = 1;
 
-        int OVERALLMAX=Integer.MIN_VALUE;
+        // rightToLeft to store product from right to left
+        int rightToLeft = 1;
 
-        for(int i=0; i<n; i++){
-            if(arr[i]>0){
-                MAXI=MAXI*arr[i];
-                MINI=MINI*arr[i];
-                if(MINI<1)
-                  MINI=1;
-            } else if(arr[i]==0){
-                MAXI=1;
-                MINI=1;
-                OVERALLMAX=Math.max(OVERALLMAX,0);
-            } else {
-                int temp = MAXI;
-                MAXI=MINI*arr[i];
-                MINI=temp*arr[i];
-                if(MAXI<1)
-                  MAXI=1;
-            }
-            OVERALLMAX=Math.max(OVERALLMAX, MAXI);
+        for (int i = 0; i < n; i++) {
+            if (leftToRight == 0) leftToRight = 1;
+            if (rightToLeft == 0) rightToLeft = 1;
+
+            // calculate product from index left to right
+            leftToRight *= arr[i];
+
+            // calculate product from index right to left
+            int j = n - i - 1;
+            rightToLeft *= arr[j];
+            maxProd = Math.max(leftToRight, Math.max(rightToLeft, maxProd));
         }
-        return OVERALLMAX;
+        return maxProd;
     }
     }
      */
+
+
 }
