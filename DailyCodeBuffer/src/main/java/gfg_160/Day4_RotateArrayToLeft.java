@@ -33,4 +33,47 @@ public class Day4_RotateArrayToLeft {
 
         System.out.println(Arrays.toString(rotateArr(arr, d)));
     }
+
+    /*
+    class Solution {
+    public void rotateArray(int[] arr, int d) {
+        int n = arr.length;
+        if (n == 0) return;
+
+        d = d % n;  // Normalize d
+
+        // Reverse first d elements
+        int start = 0, end = d - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+
+        // Reverse remaining elements
+        start = d;
+        end = n - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+
+        // Reverse entire array
+        start = 0;
+        end = n - 1;
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
+    }
+    }
+     */
 }
