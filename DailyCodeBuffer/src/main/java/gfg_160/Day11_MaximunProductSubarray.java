@@ -50,5 +50,40 @@ public class Day11_MaximunProductSubarray {
         }
         return maxProduct;
     }
+    /*
+    What works on GFG
 
+    class Solution {
+    int maxProduct(int[] arr) {
+        // code here
+        int n = arr.length;
+
+        int MAXI = 1;
+        int MINI=1;
+
+        int OVERALLMAX=Integer.MIN_VALUE;
+
+        for(int i=0; i<n; i++){
+            if(arr[i]>0){
+                MAXI=MAXI*arr[i];
+                MINI=MINI*arr[i];
+                if(MINI<1)
+                  MINI=1;
+            } else if(arr[i]==0){
+                MAXI=1;
+                MINI=1;
+                OVERALLMAX=Math.max(OVERALLMAX,0);
+            } else {
+                int temp = MAXI;
+                MAXI=MINI*arr[i];
+                MINI=temp*arr[i];
+                if(MAXI<1)
+                  MAXI=1;
+            }
+            OVERALLMAX=Math.max(OVERALLMAX, MAXI);
+        }
+        return OVERALLMAX;
+    }
+    }
+     */
 }
