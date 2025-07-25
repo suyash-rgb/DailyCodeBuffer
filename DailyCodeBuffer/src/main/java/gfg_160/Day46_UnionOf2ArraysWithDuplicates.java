@@ -28,7 +28,7 @@ Constraints:
 1 ≤ a.size(), b.size() ≤ 106
 0 ≤ a[i], b[i] ≤ 105
  */
-public class UnionOf2ArraysWithDuplicates {
+public class Day46_UnionOf2ArraysWithDuplicates {
     public static void main(String[] args) {
 
     }
